@@ -11,6 +11,9 @@ importers:
       express:
         specifier: ^5.1.0
         version: 5.1.0
+      farmers-digital-market:
+        specifier: 'link:'
+        version: 'link:'
     devDependencies:
       '@types/express':
         specifier: ^5.0.3
