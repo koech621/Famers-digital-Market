@@ -16,7 +16,7 @@ app.use("/api/products", productRoutes);
 
 // Root route
 app.get("/", (req: Request, res: Response) => {
-  res.send("🌾 Digital Farm Marketplace API is running...");
+  res.send(" Digital Farm Marketplace API is running...");
 });
 
 // Start server
