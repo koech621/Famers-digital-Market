@@ -14,16 +14,11 @@
   "packageManager": "pnpm@10.17.0",
   "devDependencies": {
     "@types/express": "^5.0.3",
-    "@types/mssql": "^9.1.8",
     "@types/node": "^24.9.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "farmers-digital-market": "link:",
-    "mssql": "^12.0.0"
-  },
-  "type": "module"
+    "express": "^5.1.0"
+  }
 }

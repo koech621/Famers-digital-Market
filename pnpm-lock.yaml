@@ -17,6 +17,12 @@ importers:
       farmers-digital-market:
         specifier: 'link:'
         version: 'link:'
+<<<<<<< HEAD
+=======
+      jsonwebtoken:
+        specifier: ^9.0.2
+        version: 9.0.2
+>>>>>>> master
       mssql:
         specifier: ^12.0.0
         version: 12.0.0
@@ -24,6 +30,12 @@ importers:
       '@types/express':
         specifier: ^5.0.3
         version: 5.0.3
+<<<<<<< HEAD
+=======
+      '@types/jsonwebtoken':
+        specifier: ^9.0.10
+        version: 9.0.10
+>>>>>>> master
       '@types/mssql':
         specifier: ^9.1.8
         version: 9.1.8
@@ -95,6 +107,7 @@ packages:
     resolution: {integrity: sha512-fCqPIfOcLE+CGqGPd66c8bZpwAji98tZ4JI9i/mlTNTlsIWslCfpg48s/ypyLxZTump5sypjrKn2/kY7q8oAbA==}
     engines: {node: '>=20.0.0'}
 
+<<<<<<< HEAD
   '@azure/msal-browser@4.25.1':
     resolution: {integrity: sha512-kAdOSNjvMbeBmEyd5WnddGmIpKCbAAGj4Gg/1iURtF+nHmIfS0+QUBBO3uaHl7CBB2R1SEAbpOgxycEwrHOkFA==}
     engines: {node: '>=0.8.0'}
@@ -105,6 +118,18 @@ packages:
 
   '@azure/msal-node@3.8.0':
     resolution: {integrity: sha512-23BXm82Mp5XnRhrcd4mrHa0xuUNRp96ivu3nRatrfdAqjoeWAGyD0eEAafxAOHAEWWmdlyFK4ELFcdziXyw2sA==}
+=======
+  '@azure/msal-browser@4.26.0':
+    resolution: {integrity: sha512-Ie3SZ4IMrf9lSwWVzzJrhTPE+g9+QDUfeor1LKMBQzcblp+3J/U1G8hMpNSfLL7eA5F/DjjPXkATJ5JRUdDJLA==}
+    engines: {node: '>=0.8.0'}
+
+  '@azure/msal-common@15.13.1':
+    resolution: {integrity: sha512-vQYQcG4J43UWgo1lj7LcmdsGUKWYo28RfEvDQAEMmQIMjSFufvb+pS0FJ3KXmrPmnWlt1vHDl3oip6mIDUQ4uA==}
+    engines: {node: '>=0.8.0'}
+
+  '@azure/msal-node@3.8.1':
+    resolution: {integrity: sha512-HszfqoC+i2C9+BRDQfuNUGp15Re7menIhCEbFCQ49D3KaqEDrgZIgQ8zSct4T59jWeUIL9N/Dwiv4o2VueTdqQ==}
+>>>>>>> master
     engines: {node: '>=16'}
 
   '@esbuild/aix-ppc64@0.25.11':
@@ -284,9 +309,18 @@ packages:
   '@types/http-errors@2.0.5':
     resolution: {integrity: sha512-r8Tayk8HJnX0FztbZN7oVqGccWgw98T/0neJphO91KkmOzug1KkofZURD4UaD5uH8AqcFLfdPErnBod0u71/qg==}
 
+  '@types/jsonwebtoken@9.0.10':
+    resolution: {integrity: sha512-asx5hIG9Qmf/1oStypjanR7iKTv0gXQ1Ov/jfrX6kS/EO0OFni8orbmGCn0672NHR3kXHwpAwR+B368ZGN/2rA==}
+
   '@types/mime@1.3.5':
     resolution: {integrity: sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==}
 
+<<<<<<< HEAD
+=======
+  '@types/ms@2.1.0':
+    resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
+
+>>>>>>> master
   '@types/mssql@9.1.8':
     resolution: {integrity: sha512-mt9h5jWj+DYE5jxnKaWSV/GqDf9FV52XYVk6T3XZF69noEe+JJV6MKirii48l81+cjmAkSq+qeKX+k61fHkYrQ==}
 
@@ -299,8 +333,13 @@ packages:
   '@types/range-parser@1.2.7':
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
 
+<<<<<<< HEAD
   '@types/readable-stream@4.0.21':
     resolution: {integrity: sha512-19eKVv9tugr03IgfXlA9UVUVRbW6IuqRO5B92Dl4a6pT7K8uaGrNS0GkxiZD0BOk6PLuXl5FhWl//eX/pzYdTQ==}
+=======
+  '@types/readable-stream@4.0.22':
+    resolution: {integrity: sha512-/FFhJpfCLAPwAcN3mFycNUa77ddnr8jTgF5VmSNetaemWB2cIlfCA9t0YTM3JAT0wOcv8D4tjPo7pkDhK3EJIg==}
+>>>>>>> master
 
   '@types/send@0.17.5':
     resolution: {integrity: sha512-z6F2D3cOStZvuk2SaP6YrwkNO65iTZcwA2ZkSABegdkAh/lf+Aa/YQndZVfmEXT5vgAp6zv06VQ3ejSVjAny4w==}
@@ -868,8 +907,13 @@ snapshots:
       '@azure/core-tracing': 1.3.1
       '@azure/core-util': 1.13.1
       '@azure/logger': 1.3.0
+<<<<<<< HEAD
       '@azure/msal-browser': 4.25.1
       '@azure/msal-node': 3.8.0
+=======
+      '@azure/msal-browser': 4.26.0
+      '@azure/msal-node': 3.8.1
+>>>>>>> master
       open: 10.2.0
       tslib: 2.8.1
     transitivePeerDependencies:
@@ -912,6 +956,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+<<<<<<< HEAD
   '@azure/msal-browser@4.25.1':
     dependencies:
       '@azure/msal-common': 15.13.0
@@ -921,6 +966,17 @@ snapshots:
   '@azure/msal-node@3.8.0':
     dependencies:
       '@azure/msal-common': 15.13.0
+=======
+  '@azure/msal-browser@4.26.0':
+    dependencies:
+      '@azure/msal-common': 15.13.1
+
+  '@azure/msal-common@15.13.1': {}
+
+  '@azure/msal-node@3.8.1':
+    dependencies:
+      '@azure/msal-common': 15.13.1
+>>>>>>> master
       jsonwebtoken: 9.0.2
       uuid: 8.3.2
 
@@ -1030,8 +1086,18 @@ snapshots:
 
   '@types/http-errors@2.0.5': {}
 
+  '@types/jsonwebtoken@9.0.10':
+    dependencies:
+      '@types/ms': 2.1.0
+      '@types/node': 24.9.1
+
   '@types/mime@1.3.5': {}
 
+<<<<<<< HEAD
+=======
+  '@types/ms@2.1.0': {}
+
+>>>>>>> master
   '@types/mssql@9.1.8':
     dependencies:
       '@types/node': 24.9.1
@@ -1048,7 +1114,11 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
+<<<<<<< HEAD
   '@types/readable-stream@4.0.21':
+=======
+  '@types/readable-stream@4.0.22':
+>>>>>>> master
     dependencies:
       '@types/node': 24.9.1
 
@@ -1090,7 +1160,11 @@ snapshots:
 
   bl@6.1.4:
     dependencies:
+<<<<<<< HEAD
       '@types/readable-stream': 4.0.21
+=======
+      '@types/readable-stream': 4.0.22
+>>>>>>> master
       buffer: 6.0.3
       inherits: 2.0.4
       readable-stream: 4.7.0
