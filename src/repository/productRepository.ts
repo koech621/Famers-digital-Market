@@ -1,5 +1,9 @@
 // src/repositories/productRepository.ts
+<<<<<<< HEAD
 import sql from "../db/config"; //  config.ts default-exports `sql` from 'mssql'
+=======
+import sql from "../db/config"; // assumes config.ts default-exports `sql` from 'mssql'
+>>>>>>> master
 import { Product } from "../types/productTypes";
 
 /**
