@@ -17,6 +17,15 @@ importers:
       express:
         specifier: ^5.1.0
         version: 5.1.0
+<<<<<<< HEAD
+=======
+      farmers-digital-market:
+        specifier: 'link:'
+        version: 'link:'
+      jsonwebtoken:
+        specifier: ^9.0.2
+        version: 9.0.2
+>>>>>>> 099cc7fe039467ea28453047e352990e155979d2
       mssql:
         specifier: ^12.1.0
         version: 12.1.0
@@ -27,6 +36,15 @@ importers:
       '@types/express':
         specifier: ^5.0.3
         version: 5.0.3
+<<<<<<< HEAD
+=======
+      '@types/jsonwebtoken':
+        specifier: ^9.0.10
+        version: 9.0.10
+      '@types/mssql':
+        specifier: ^9.1.8
+        version: 9.1.8
+>>>>>>> 099cc7fe039467ea28453047e352990e155979d2
       '@types/node':
         specifier: ^24.9.1
         version: 24.9.1
@@ -782,6 +800,16 @@ snapshots:
 
   '@types/mime@1.3.5': {}
 
+<<<<<<< HEAD
+=======
+  '@types/ms@2.1.0': {}
+
+<<<<<<< HEAD
+=======
+  '@types/ms@2.1.0': {}
+
+>>>>>>> master
+>>>>>>> 099cc7fe039467ea28453047e352990e155979d2
   '@types/mssql@9.1.8':
     dependencies:
       '@types/node': 24.9.1

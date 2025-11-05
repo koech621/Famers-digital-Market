@@ -27,4 +27,8 @@ app.listen(PORT, async () => {
   } catch (error) {
     console.error(" Error starting server:", error);
   }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 099cc7fe039467ea28453047e352990e155979d2
