@@ -2,17 +2,32 @@ import express, { Application, Request, Response } from "express";
 import dotenv from "dotenv";
 import productRoutes from "./routes/productRoutes";
 import {getPool} from "./db/config";
+import cors from "cors";
+import authRoutes from "./routes/authRoutes";
+
 
 dotenv.config();
 
 const app: Application = express();
 const PORT = process.env.PORT || 5000;
+app.use(
+  cors({
+    origin: "*",
+     methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  }
+
+  )
+) 
+
+
 
 // Middleware
 app.use(express.json());
 
 // Routes
 app.use("/api/products", productRoutes);
+app.use("/api/auth", authRoutes)
 
 // Root route
 app.get("/", (req: Request, res: Response) => {
