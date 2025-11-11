@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { Request, Response } from "express";
 import * as marketService from "../services/marketServices";
 
 export const getMarkets = async (req: Request, res: Response): Promise<void> => {
