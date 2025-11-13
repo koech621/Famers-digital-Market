@@ -1,4 +1,4 @@
-export interface payment {
+export interface Payment {
   payment_id: number;
   order_id: number;
   payment_method: string;

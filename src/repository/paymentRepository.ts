@@ -1,15 +1,15 @@
 import { getPool } from '../db/config';
-import { payment } from '../types/paymentTypes'; 
+import { Payment } from '../types/paymentTypes'; 
 import sql from "mssql"
 
 export const PaymentRepository = {
-  async getAll(): Promise<payment[]> {
+  async getAll(): Promise<Payment[]> {
     const pool = await getPool();
     const result = await pool.request().query('SELECT * FROM Payment');
     return result.recordset;
   },
 
-  async getById(id: number): Promise<payment | null> {
+  async getById(id: number): Promise<Payment | null> {
     const pool = await getPool();
     const result = await pool.request()
       .input('id', sql.Int, id)
@@ -17,7 +17,7 @@ export const PaymentRepository = {
     return result.recordset[0] || null;
   },
 
-  async create(payment: Omit<payment, 'payment_id'>): Promise<void> {
+  async create(payment: Omit<Payment, 'payment_id'>): Promise<void> {
     const pool = await getPool();
     await pool.request()
       .input('order_id', sql.Int, payment.order_id)
@@ -31,7 +31,7 @@ export const PaymentRepository = {
       `);
   },
 
-  async update(id: number, payment: Partial<payment>): Promise<void> {
+  async update(id: number, payment: Partial<Payment>): Promise<void> {
     const pool = await getPool();
     await pool.request()
       .input('id', sql.Int, id)

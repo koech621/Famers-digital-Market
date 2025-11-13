@@ -4,6 +4,9 @@ import productRoutes from "./routes/productRoutes";
 import {getPool} from "./db/config";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes";
+import paymentRoutes from "./routes/paymentRoutes"
+import marketRoutes from "./routes/marketRoutes"
+
 
 
 dotenv.config();
@@ -28,6 +31,9 @@ app.use(express.json());
 // Routes
 app.use("/api/products", productRoutes);
 app.use("/api/auth", authRoutes)
+app.use("/api/payment",paymentRoutes )
+app.use("/api/market",marketRoutes)
+
 
 // Root route
 app.get("/", (req: Request, res: Response) => {
