@@ -4,7 +4,8 @@ import productRoutes from "./routes/productRoutes";
 import {getPool} from "./db/config";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes";
-
+import { orderRoutes } from "./routes/orderRoutes";
+import { logisticsRoutes } from "./routes/logisticsRoutes";
 
 dotenv.config();
 
@@ -27,7 +28,14 @@ app.use(express.json());
 
 // Routes
 app.use("/api/products", productRoutes);
-app.use("/api/auth", authRoutes)
+app.use("/api/auth", authRoutes);
+
+orderRoutes(app);
+logisticsRoutes(app);
+
+
+
+
 
 // Root route
 app.get("/", (req: Request, res: Response) => {

@@ -7,7 +7,7 @@ CREATE TABLE UserAccount (
     role VARCHAR(50) NOT NULL 
 );
 
-CREATE TABLE Farmer (p
+CREATE TABLE Farmer (
     farmer_id INT IDENTITY(1,1) PRIMARY KEY,
     user_id INT NOT NULL,
     full_name VARCHAR(150) NOT NULL,
