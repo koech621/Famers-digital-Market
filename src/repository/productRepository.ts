@@ -1,4 +1,4 @@
-// src/repositories/productRepository.ts
+
 import sql from "../db/config"; //  config.ts default-exports `sql` from 'mssql'
 import { Product } from "../types/productTypes";
 

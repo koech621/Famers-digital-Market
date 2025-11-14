@@ -6,7 +6,7 @@ import cors from "cors";
 import authRoutes from "./routes/authRoutes";
 import paymentRoutes from "./routes/paymentRoutes"
 import marketRoutes from "./routes/marketRoutes"
-
+import farmerRoutes from "./routes/farmerRoutes"
 
 
 dotenv.config();
@@ -33,6 +33,7 @@ app.use("/api/products", productRoutes);
 app.use("/api/auth", authRoutes)
 app.use("/api/payment",paymentRoutes )
 app.use("/api/market",marketRoutes)
+app.use("/api/farmer",farmerRoutes)
 
 
 // Root route
