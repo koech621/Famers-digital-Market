@@ -1,10 +1,10 @@
-import { paymentRepository } from './repository/paymentRepository';
-import { payment } from './paymentServices';
+import { PaymentRepository } from '../repository/paymentRepository';
+import { Payment } from '../types/paymentTypes';  
 
 export const PaymentService = {
-  getAll: () => paymentRepository.getAll(),
-  getById: (id: number) => paymentRepository.getById(id),
-  create: (payment: Omit<payment, 'payment_id'>) => paymentRepository.create(payment),
-  update: (id: number, payment: Partial<payment>) => paymentRepository.update(id, payment),
-  delete: (id: number) => paymentRepository.delete(id),
+  getAll: () => PaymentRepository.getAll(),
+  getById: (id: number) => PaymentRepository.getById(id),
+  create: (payment: Omit<Payment, 'payment_id'>) => PaymentRepository.create(payment),
+  update: (id: number, payment: Partial<Payment>) => PaymentRepository.update(id, payment),
+  delete: (id: number) => PaymentRepository.delete(id),
 };

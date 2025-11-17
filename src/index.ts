@@ -4,8 +4,10 @@ import productRoutes from "./routes/productRoutes";
 import {getPool} from "./db/config";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes";
-import { orderRoutes } from "./routes/orderRoutes";
-import { logisticsRoutes } from "./routes/logisticsRoutes";
+import paymentRoutes from "./routes/paymentRoutes"
+import marketRoutes from "./routes/marketRoutes"
+import farmerRoutes from "./routes/farmerRoutes"
+
 
 dotenv.config();
 
@@ -28,13 +30,10 @@ app.use(express.json());
 
 // Routes
 app.use("/api/products", productRoutes);
-app.use("/api/auth", authRoutes);
-
-orderRoutes(app);
-logisticsRoutes(app);
-
-
-
+app.use("/api/auth", authRoutes)
+app.use("/api/payment",paymentRoutes )
+app.use("/api/market",marketRoutes)
+app.use("/api/farmer",farmerRoutes)
 
 
 // Root route

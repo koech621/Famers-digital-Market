@@ -1,27 +1,52 @@
-import sql from "../db/config";
+import * as productRepo from "../repository/productRepository";
 
-// Add a product
 export const addProduct = async (product: any) => {
-  const query = `
-    INSERT INTO Product (farmer_id, product_name, category, quantity, price, image_url, description)
-    VALUES (@farmer_id, @product_name, @category, @quantity, @price, @image_url, @description)
-  `;
+  if (!product.product_name || !product.price) {
+    throw new Error("Product name and price are required.");
+  }
 
-  const request = new sql.Request();
-  request.input("farmer_id", product.farmer_id);
-  request.input("product_name", product.product_name);
-  request.input("category", product.category);
-  request.input("quantity", product.quantity);
-  request.input("price", product.price);
-  request.input("image_url", product.image_url || null);
-  request.input("description", product.description || null);
-
-  await request.query(query);
-  return { message: " Product added successfully" };
+  await productRepo.createProduct(product);
+  return { message: "Product added successfully" };
 };
 
-// Get all products
 export const getAllProducts = async () => {
-  const result = await new sql.Request().query("SELECT * FROM Product");
-  return result.recordset;
+  return await productRepo.getAllProducts();
+};
+
+export const getProductById = async (id: number) => {
+  if (isNaN(id)) {
+    throw new Error(`Invalid product ID: ${id}`);
+  }
+
+  const product = await productRepo.getProduct(id);
+  if (!product) {
+    throw new Error("Product not found");
+  }
+
+  return product;
+};
+export const updateProduct = async (id: number, updatedData: any) => {
+  if (isNaN(id)) {
+    throw new Error(`Invalid product ID: ${id}`);
+  }
+
+  const existingProduct = await productRepo.getProduct(id);
+  if (!existingProduct) {
+    throw new Error("Product not found");
+  }
+  if (updatedData.price && updatedData.price <= 0) {
+    throw new Error("Price must be greater than zero.");
+  }
+
+  await productRepo.updateProduct(id, updatedData);
+  return { message: "Product updated successfully" };
+};
+export const deleteProduct = async (id: number) => {
+  if (isNaN(id)) throw new Error(`Invalid product ID: ${id}`);
+
+  const existingProduct = await productRepo.getProduct(id);
+  if (!existingProduct) return null; // Not found
+
+  await productRepo.deleteProduct(id);
+  return { message: "Product deleted successfully" };
 };

@@ -43,3 +43,4 @@ export const getPool = async (): Promise<sql.ConnectionPool> => {
 };
 
 export default sql;
+export  {sqlConfig};
