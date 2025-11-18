@@ -2,7 +2,11 @@ import { Request, Response } from "express";
 import * as productService from "../services/productServices";
 
 // Add new product
+<<<<<<< HEAD
+export const addProduct = async (req: Request, res: Response) => {
+=======
 export const createProduct = async (req: Request, res: Response) => {
+>>>>>>> f8891ecc3bb2f3f8888ff3709f73bdac584364a1
   try {
     const result = await productService.addProduct(req.body);
     res.status(201).json(result);
@@ -28,6 +32,8 @@ export const getAllProducts = async (req: Request, res: Response) => {
     });
   }
 };
+<<<<<<< HEAD
+=======
 
 
 // Get product by ID
@@ -87,3 +93,4 @@ export const deleteProduct = async (req: Request, res: Response) => {
     res.status(500).json({ message: "Failed to delete product", error: error.message });
   }
 };
+>>>>>>> f8891ecc3bb2f3f8888ff3709f73bdac584364a1

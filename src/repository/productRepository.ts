@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+// src/repositories/productRepository.ts
+=======
 
+>>>>>>> f8891ecc3bb2f3f8888ff3709f73bdac584364a1
 import sql from "../db/config"; //  config.ts default-exports `sql` from 'mssql'
 import { Product } from "../types/productTypes";
 
@@ -14,11 +18,15 @@ export const getAllProducts = async (): Promise<Product[]> => {
   return result.recordset;
 };
 
+<<<<<<< HEAD
+export const getProductById = async (id: number): Promise<Product | null> => {
+=======
 export const getProduct = async (id: number): Promise<Product | null> => {
   if (typeof id !== "number" || !Number.isInteger(id)) {
     throw new Error(`Invalid product ID: ${JSON.stringify(id)}`);
   }
 
+>>>>>>> f8891ecc3bb2f3f8888ff3709f73bdac584364a1
   const request = new sql.Request();
   request.input("id", sql.Int, id);
   const result = await request.query("SELECT * FROM Product WHERE product_id = @id");
@@ -30,6 +38,17 @@ export const createProduct = async (product: Product): Promise<Product> => {
   request.input("farmer_id", sql.Int, product.farmer_id);
   request.input("product_name", sql.NVarChar(200), product.product_name);
   request.input("category", sql.NVarChar(100), product.category ?? null);
+<<<<<<< HEAD
+  request.input("quantity", sql.Int, product.quantity);
+  request.input("price", sql.Decimal(18, 2), product.price);
+  request.input("image_url", sql.NVarChar(500), product.image_url ?? null);
+  request.input("description", sql.NVarChar(1000), product.description ?? null);
+
+  const insertQuery = `
+    INSERT INTO Product (farmer_id, product_name, category, quantity, price, image_url, description)
+    OUTPUT INSERTED.*
+    VALUES (@farmer_id, @product_name, @category, @quantity, @price, @image_url, @description)
+=======
   request.input("stock_quantity", sql.Int, product.stock_quantity);
   request.input("price", sql.Decimal(18, 2), product.price);
   request.input("description", sql.NVarChar(1000), product.description ?? null);
@@ -38,6 +57,7 @@ export const createProduct = async (product: Product): Promise<Product> => {
     INSERT INTO Product (farmer_id, product_name, category, stock_quantity, price, description)
     OUTPUT INSERTED.*
     VALUES (@farmer_id, @product_name, @category, @stock_quantity, @price, @description)
+>>>>>>> f8891ecc3bb2f3f8888ff3709f73bdac584364a1
   `;
 
   const result = await request.query(insertQuery);
@@ -49,8 +69,14 @@ export const updateProduct = async (id: number, product: Partial<Product>): Prom
   request.input("id", sql.Int, id);
   request.input("product_name", sql.NVarChar(200), product.product_name ?? null);
   request.input("category", sql.NVarChar(100), product.category ?? null);
+<<<<<<< HEAD
+  request.input("quantity", sql.Int, product.quantity ?? null);
+  request.input("price", sql.Decimal(18, 2), product.price ?? null);
+  request.input("image_url", sql.NVarChar(500), product.image_url ?? null);
+=======
   request.input("stock_quantity", sql.Int, product.stock_quantity ?? null);
   request.input("price", sql.Decimal(18, 2), product.price ?? null);
+>>>>>>> f8891ecc3bb2f3f8888ff3709f73bdac584364a1
   request.input("description", sql.NVarChar(1000), product.description ?? null);
 
   const updateQuery = `
@@ -58,8 +84,14 @@ export const updateProduct = async (id: number, product: Partial<Product>): Prom
     SET 
       product_name = COALESCE(@product_name, product_name),
       category = COALESCE(@category, category),
+<<<<<<< HEAD
+      quantity = COALESCE(@quantity, quantity),
+      price = COALESCE(@price, price),
+      image_url = COALESCE(@image_url, image_url),
+=======
       stock_quantity = COALESCE(@stock_quantity, stock_quantity),
       price = COALESCE(@price, price),
+>>>>>>> f8891ecc3bb2f3f8888ff3709f73bdac584364a1
       description = COALESCE(@description, description)
     OUTPUT INSERTED.*
     WHERE product_id = @id
